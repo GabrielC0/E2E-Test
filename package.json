@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@testing-library/cypress": "^10.0.3",
+    "chromedriver": "^135.0.0",
+    "cypress": "^14.2.1",
+    "selenium-webdriver": "^4.31.0"
+  }
+}

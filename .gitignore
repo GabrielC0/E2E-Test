@@ -1,0 +1,39 @@
+# Dépendances
+/vendor/
+/node_modules/
+
+# Environnement et configuration
+.env
+.env.local
+.env.*.local
+config.local.php
+
+# Logs et caches
+/logs/
+*.log
+/cache/
+/tmp/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dossiers spécifiques aux IDE
+/.idea/
+/.vscode/
+/.phpunit.result.cache
+/nbproject/
+
+# Fichiers Cypress
+/cypress/videos/
+/cypress/screenshots/
+/cypress/reports/
+
+# Fichiers de build et temporaires
+/dist/
+/build/
+/public/build/
+
+# Composer
+composer.phar

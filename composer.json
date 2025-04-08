@@ -1,0 +1,23 @@
+{
+  "name": "changreniergabriel/gestion_produit",
+  "autoload": {
+    "psr-4": {
+      "GestionProduit\\": "src/gestion_produit/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GestionProduit\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Gabriel CHANGRENIER",
+      "email": "gabriel.changrenier@efrei.net"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^11.5",
+    "php-webdriver/webdriver": "^1.15"
+  }
+}

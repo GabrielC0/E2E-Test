@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="GestionProduit Test Suite">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <env name="DB_HOST" value="mysql-gabrielc0.alwaysdata.net"/>
+        <env name="DB_NAME" value="gabrielc0_e2e"/>
+        <env name="DB_USER" value="gabrielc0_gaby"/>
+        <env name="DB_PASS" value="gabrielc0_gaby-2025"/>
+    </php>
+</phpunit>
