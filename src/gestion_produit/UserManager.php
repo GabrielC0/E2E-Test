@@ -14,13 +14,25 @@ class UserManager {
         ]);
     }
 
-    public function addUser(string $name, string $email): void {
+    public function addUser(string $name, string $email, ?string $createdUserDate = null): void {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new InvalidArgumentException("Email invalide.");
         }
-
-        $stmt = $this->db->prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
-        $stmt->execute(['name' => $name, 'email' => $email]);
+    
+        if ($createdUserDate === null) {
+            $stmt = $this->db->prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
+            $stmt->execute([
+                'name' => $name,
+                'email' => $email
+            ]);
+        } else {
+            $stmt = $this->db->prepare("INSERT INTO users (name, email, created_user_date) VALUES (:name, :email, :created_user_date)");
+            $stmt->execute([
+                'name' => $name,
+                'email' => $email,
+                'created_user_date' => $createdUserDate
+            ]);
+        }
     }
 
     public function removeUser(int $id): void {
